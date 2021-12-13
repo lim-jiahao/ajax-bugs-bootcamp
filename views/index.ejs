@@ -8,24 +8,39 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div id="create-bug">
-      <p><strong>Create Bug Form</strong></p>
-      <input placeholder="Problem" id="problem" />
-      <input placeholder="Error Text" id="error-text" />
-      <input placeholder="Commit" id="commit" />
-      <div id="radio-buttons"></div>
-      <button id="submit">Create New Bug</button>
-      <p id="warning"></p>
+    <div id="login-container">
+      <div><input placeholder="Username" id="username" /></div>
+      <div><input placeholder="Email" id="email" /></div>
+      <div><input type="password" placeholder="Password" id="password" /></div>
+      <div>
+        <button id="login-button">Log In</button>
+        <button id="register-button">Register</button>
+      </div>
+      <p id="warning2"></p>
     </div>
 
-    <div id="create-feature">
-      <p id="create-feature-label"><strong>Create Feature Form</strong></p>
-      <input placeholder="Feature name" id="feature" />
-      <button id="submit-feature">Submit</button>
-    </div>
+    <div id="dashboard">
+      <p id="logged-in-as"></p>
+      <a href="#" id="logout">Log Out</a>
+      <div id="create-bug">
+        <p><strong>Create Bug Form</strong></p>
+        <input placeholder="Problem" id="problem" />
+        <input placeholder="Error Text" id="error-text" />
+        <input placeholder="Commit" id="commit" />
+        <div id="radio-buttons"></div>
+        <button id="submit">Create New Bug</button>
+        <p id="warning"></p>
+      </div>
 
-    <div id="bug-list">
-      <p id="bug-list-label"><strong>Bug List</strong></p>
+      <div id="create-feature">
+        <p id="create-feature-label"><strong>Create Feature Form</strong></p>
+        <input placeholder="Feature name" id="feature" />
+        <button id="submit-feature">Submit</button>
+      </div>
+
+      <div id="bug-list">
+        <p id="bug-list-label"><strong>Bug List</strong></p>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/script.js"></script>

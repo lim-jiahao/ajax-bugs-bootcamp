@@ -1,6 +1,6 @@
-export default function initBugModel(sequelize, DataTypes) {
+export default function initUserModel(sequelize, DataTypes) {
   return sequelize.define(
-    'bug',
+    'user',
     {
       id: {
         allowNull: false,
@@ -8,33 +8,17 @@ export default function initBugModel(sequelize, DataTypes) {
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
-      problem: {
+      name: {
         allowNull: false,
         type: DataTypes.STRING,
       },
-      errorText: {
-        allowNull: true,
+      email: {
+        allowNull: false,
         type: DataTypes.STRING,
       },
-      commit: {
-        allowNull: true,
+      password: {
+        allowNull: false,
         type: DataTypes.STRING,
-      },
-      featureId: {
-        allowNull: false,
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'features',
-          key: 'id',
-        },
-      },
-      userId: {
-        allowNull: false,
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'users',
-          key: 'id',
-        },
       },
       createdAt: {
         allowNull: false,

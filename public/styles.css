@@ -3,6 +3,19 @@ body {
   margin: 0 auto;
 }
 
+#login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  /* display: none; */
+}
+
+#dashboard {
+  display: none;
+  text-align: center;
+}
+
 #create-bug {
   display: flex;
   flex-direction: column;
@@ -14,7 +27,8 @@ body {
   text-align: center;
 }
 
-#warning {
+#warning,
+#warning2 {
   color: red;
   font-weight: bold;
 }
