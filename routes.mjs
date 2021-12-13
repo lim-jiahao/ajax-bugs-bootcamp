@@ -2,14 +2,20 @@ import db from './models/index.mjs';
 
 // import your controllers here
 import initBugsController from './controllers/bugs.mjs';
+import initFeaturesController from './controllers/features.mjs';
 
 export default function bindRoutes(app) {
   // initialize the controller functions here
   const BugsController = initBugsController(db);
+  const FeaturesController = initFeaturesController(db);
 
   // pass in the db for all callbacks
+  app.get('/bug', BugsController.getAllBugs);
   app.post('/bug', BugsController.create);
 
+  app.get('/feature', FeaturesController.getAllFeatures);
+  app.post('/feature', FeaturesController.create);
+
   // define your route matchers here using app
-  app.get('/', (req, res) => res.render('index'));
+  app.get('/', async (req, res) => res.render('index'));
 }
